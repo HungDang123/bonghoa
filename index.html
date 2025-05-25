@@ -110,8 +110,8 @@
 
         .center {
             position: absolute;
-            top: 28px;
-            left: 28px;
+            top: 40px;
+            left: 24px;
             width: 24px;
             height: 24px;
             background: radial-gradient(circle, #ffd700, #ff69b4);
@@ -134,8 +134,8 @@
 
         .stem {
             position: absolute;
-            bottom: -20px;
-            left: 37px;
+            bottom: -30px;
+            left: 33px;
             width: 6px;
             height: 25px;
             background: linear-gradient(to bottom, #90EE90, #228B22);
@@ -144,8 +144,8 @@
 
         .leaf {
             position: absolute;
-            bottom: -15px;
-            left: 43px;
+            bottom: -19px;
+            left: 37px;
             width: 20px;
             height: 12px;
             background: linear-gradient(45deg, #90EE90, #32CD32);
@@ -249,8 +249,8 @@
     <div class="container">
         <!-- Title -->
         <div class="title">
-            <h1>Dành Tặng Em Yêu</h1>
-            <p>Những đóa hoa đào xinh đẹp như nụ cười của em 🌸</p>
+            <h1>Dành Tặng Em Bé Iu</h1>
+            <p>Những đóa hoa xinh đẹp như nụ cười của em 🌸</p>
         </div>
 
         <!-- Flowers -->
@@ -400,5 +400,43 @@
             });
         });
     </script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
 </body>
 </html>
